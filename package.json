@@ -1,0 +1,15 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "A demo nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "keywords": [
+    "movie",
+    "demo"
+  ],
+  "author": "kira",
+  "license": "MIT"
+}
