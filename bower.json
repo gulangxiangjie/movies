@@ -1,0 +1,25 @@
+{
+  "name": "movies",
+  "description": "A demo nodejs project",
+  "main": "app.js",
+  "authors": [
+    "kira"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "movie",
+    "demo"
+  ],
+  "homepage": "https://github.com/gulangxiangjie/movies",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.98.0"
+  }
+}

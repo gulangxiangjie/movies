@@ -3,7 +3,7 @@ var path = require('path');
 var port = process.env.PORT || 3000;
 var app = express();
 
-app.set('views', './views');
+app.set('views', './views/pages');
 app.set('view engine', 'jade');
 
 app.listen(port);
