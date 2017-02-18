@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+  .row
+    form(style="padding: 16px", action="/admin/movie", method="post").col.s12
+      input(type="hidden", name="movie[_id]", value="#{movie._id}")
+      .input-field.col.s12
+        input(type="text", name="movie[title]", value="#{movie.title}")#title.validate
+        label(for="title") 电影标题
+      .input-field.col.s12
+        input(type="text", name="movie[doctor]", value="#{movie.doctor}")#doctor.validate
+        label(for="doctor") 导演
+      .input-field.col.s12
+        input(type="text", name="movie[country]", value="#{movie.country}")#country.validate
+        label(for="country") 制片国家/地区
+      .input-field.col.s12
+        input(type="text", name="movie[year]", value="#{movie.year}")#year.validate
+        label(for="year") 上映年份
+      .input-field.col.s12
+        input(type="text", name="movie[poster]", value="#{movie.poster}")#poster.validate
+        label(for="poster") 海报地址
+      .input-field.col.s12
+        input(type="text", name="movie[flash]", value="#{movie.flash}")#flash.validate
+        label(for="flash") 预告片地址
+      .input-field.col.s12
+        textarea(type="text", name="movie[summary]")#summary.materialize-textarea #{movie.summary}
+        label(for="summary") 简介
+      .input-field.col.s12
+        input(type="text", name="movie[language]", value="#{movie.language}")#language.validate
+        label(for="language") 语言
+      button(type="submit").btn.btn-large.waves-effect.waves-light
+        if(!movie._id)
+          添加
+        else
+          修改
+        i.material-icons.right send

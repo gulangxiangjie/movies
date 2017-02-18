@@ -1,6 +1,16 @@
 extends ../layout
 
 block content
-  .container
+  each movie, i in movies
     .row
-      h3 哇哈哈哈
+      .container
+        .col.s12
+          .card
+            .card-image
+              img(src="#{movie.poster}")
+              span.card-title(style="color: #000") #{movie.title} by #{movie.doctor}
+              a.btn-floating.halfway-fab.waves-effect.waves-light.red
+                i.material-icons add
+            .card-content #{movie.summary}
+            .card-action
+              a(href="/admin/movie/#{movie._id}") 修改

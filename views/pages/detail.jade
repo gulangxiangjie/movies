@@ -1,4 +1,15 @@
 extends ../layout
 
 block content
-  h3 #{title} 详情界面
+  .row(style="padding: 16px 0")
+    .container
+      .col.s12
+        .card
+          .card-image
+            img(src="#{movie.poster}")
+            span.card-title(style="color: #000") #{movie.title} by #{movie.doctor}
+            a.btn-floating.halfway-fab.waves-effect.waves-light.red
+              i.material-icons add
+          .card-content #{movie.summary}
+          .card-action
+            a(href="/admin/movie/#{movie._id}") 修改
